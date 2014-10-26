@@ -5,7 +5,7 @@
     
 <struts>
 
-	<package name="test" extends="struts-default" namespace="/">
+	<package name="test" extends="struts-default" namespace="/test">
 	
 		<action name="test" method="test" class="com.hecj.web.action.TestAction">
 			<result name="success">/index.jsp</result>

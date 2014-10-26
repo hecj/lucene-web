@@ -18,7 +18,7 @@
 		</tr>
 		<tr>
 			<td>测试Action</td>
-			<td><a href="<%=basePath %>test.do">进入Action</a></td>
+			<td><a href="<%=basePath %>test/test.action">进入Action</a></td>
 		</tr>
 	
 	</table>
