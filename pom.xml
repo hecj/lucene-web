@@ -18,6 +18,12 @@
 	<!-- 依赖包配置 -->
 	<dependencies>
 
+		<dependency>
+			<groupId>org.hecj.lucene</groupId>
+			<artifactId>lucene-services</artifactId>
+			<version>${version}</version>
+		</dependency>
+
 		<!-- JSP -->
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
