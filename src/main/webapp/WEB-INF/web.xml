@@ -7,7 +7,7 @@
 	<!-- Spring config -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:applicationContext.xml,classpath*:daoBeans.xml</param-value>
+		<param-value>classpath:bean/actionBeans.xml,classpath:/bean/daoBeans.xml</param-value>
 	</context-param>
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>

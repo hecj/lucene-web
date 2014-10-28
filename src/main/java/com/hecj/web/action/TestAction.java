@@ -26,6 +26,7 @@ public class TestAction extends ActionSupport {
 		System.out.println("进来了...");
 		
 		System.out.println(studentDao);
+		System.out.println(studentDao.queryListStudnet().size());
 		
 		return "success" ;
 	}
