@@ -14,14 +14,15 @@
 
 	<artifactId>lucene-web</artifactId>
 	<packaging>war</packaging>
-	
+
 	<!-- 依赖包配置 -->
 	<dependencies>
-
+		<!--  -->
 		<dependency>
 			<groupId>org.hecj.lucene</groupId>
 			<artifactId>lucene-services</artifactId>
-			<version>${version}</version>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- JSP -->
@@ -44,49 +45,61 @@
 		<dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-core</artifactId>
+			<version>2.3.16.3</version>
 		</dependency>
-		
+
 		<!-- struts2-spring-plugin -->
 		<dependency>
 			<groupId>org.apache.struts</groupId>
 			<artifactId>struts2-spring-plugin</artifactId>
-			<version>${struts2.version}</version>
+			<version>2.3.16.3</version>
 			<exclusions>
-			
 				<exclusion>
-          			<groupId>org.springframework</groupId>
+					<groupId>org.springframework</groupId>
 					<artifactId>spring-core</artifactId>
-        		</exclusion>
+				</exclusion>
 				<exclusion>
-          			<groupId>org.springframework</groupId>
+					<groupId>org.springframework</groupId>
 					<artifactId>spring-context</artifactId>
-        		</exclusion>
+				</exclusion>
 				<exclusion>
-          			<groupId>org.springframework</groupId>
+					<groupId>org.springframework</groupId>
 					<artifactId>spring-beans</artifactId>
-        		</exclusion>
+				</exclusion>
 				<exclusion>
-          			<groupId>org.springframework</groupId>
+					<groupId>org.springframework</groupId>
 					<artifactId>spring-web</artifactId>
-        		</exclusion>
+				</exclusion>
 				<exclusion>
-          			<groupId>org.springframework</groupId>
+					<groupId>org.springframework</groupId>
 					<artifactId>spring-webmvc</artifactId>
-        		</exclusion>
+				</exclusion>
 				<exclusion>
-          			<groupId>org.springframework</groupId>
+					<groupId>org.springframework</groupId>
 					<artifactId>spring-aop</artifactId>
-        		</exclusion>
+				</exclusion>
 				<exclusion>
-          			<groupId>org.springframework</groupId>
+					<groupId>org.springframework</groupId>
 					<artifactId>spring-tx</artifactId>
-        		</exclusion>
-        		
+				</exclusion>
 			</exclusions>
 		</dependency>
-		
-		
-				
+
+		<!-- spring core <dependency> <groupId>org.springframework</groupId> <artifactId>spring-core</artifactId> 
+			<version>${org.springframework.version}</version> </dependency> <dependency> 
+			<groupId>org.springframework</groupId> <artifactId>spring-context</artifactId> 
+			<version>${org.springframework.version}</version> </dependency> <dependency> 
+			<groupId>org.springframework</groupId> <artifactId>spring-beans</artifactId> 
+			<version>${org.springframework.version}</version> </dependency> <dependency> 
+			<groupId>org.springframework</groupId> <artifactId>spring-web</artifactId> 
+			<version>${org.springframework.version}</version> </dependency> <dependency> 
+			<groupId>org.springframework</groupId> <artifactId>spring-webmvc</artifactId> 
+			<version>${org.springframework.version}</version> </dependency> <dependency> 
+			<groupId>org.springframework</groupId> <artifactId>spring-aop</artifactId> 
+			<version>${org.springframework.version}</version> </dependency> <dependency> 
+			<groupId>org.springframework</groupId> <artifactId>spring-tx</artifactId> 
+			<version>${org.springframework.version}</version> </dependency> -->
+
 		<!-- java tools -->
 		<dependency>
 			<groupId>com.sun</groupId>
@@ -95,12 +108,12 @@
 			<scope>provided</scope>
 		</dependency>
 
+
 	</dependencies>
 
 
 	<!-- 构建项目参数配置 -->
 	<build>
-
 		<finalName>lucene-web</finalName>
 
 		<plugins>
@@ -122,7 +135,13 @@
 					</connectors>
 				</configuration>
 			</plugin>
-
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<testFailureIgnore>true</testFailureIgnore>
+				</configuration>
+			</plugin>
 
 		</plugins>
 
