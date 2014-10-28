@@ -21,8 +21,7 @@
 		<dependency>
 			<groupId>org.hecj.lucene</groupId>
 			<artifactId>lucene-services</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>provided</scope>
+			<version>${version}</version>
 		</dependency>
 
 		<!-- JSP -->
