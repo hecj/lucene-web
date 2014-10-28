@@ -8,7 +8,7 @@
 	
 	
 	<!-- action -->
-	<bean id="testAction" class="com.hecj.web.action.TestAction">
+	<bean id="testAction" class="com.hecj.web.action.TestAction" scope="prototype" autowire="byName">
 	</bean>
 	
 	
