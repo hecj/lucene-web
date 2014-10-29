@@ -7,7 +7,9 @@
 	<!-- Spring config -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:bean/actionBeans.xml,classpath:/bean/daoBeans.xml</param-value>
+		<!-- tow type provider classpath jar -->
+	 	<param-value>classpath:bean/actionBeans.xml,classpath:/bean/daoBeans.xml,classpath:/bean/servicesBeans.xml</param-value>
+<!--    <param-value>classpath:bean/actionBeans.xml,classpath*:bean/daoBeans.xml</param-value> -->
 	</context-param>
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
